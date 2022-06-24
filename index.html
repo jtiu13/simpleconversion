@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Length Converter</title>
+  <link rel="stylesheet" href="css/main.min.css">
+</head>
+<body>
+
+
+  <div class="container">
+    <div class="row justify-content-center p-5">
+      <div class="col-md-6 bg-light p-5" >
+        <h1 class="text-center text-dark mb-3">Simple Conversion</h1>
+
+        <form action="#">
+          <div class="form-group mb-2">
+            <input type="number" class="form-control form-control-lg bg-black text-white" id="footInput" placeholder="Input Value">
+          </div>
+        </form>
+
+        <div id="output">
+          <div class="card mb-2">
+            <div class="card-block bg-danger text-white p-3">
+              <h4>Meter:</h4>
+              <div id="meterOutput"></div>
+            </div>
+          </div>
+        </div>
+
+        <div id="output">
+          <div class="card mb-2">
+            <div class="card-block bg-warning text-white p-3">
+              <h4>Kilometer:</h4>
+              <div id="kmOutput"></div>
+            </div>
+          </div>
+        </div>
+
+        <div id="output">
+          <div class="card mb-2">
+            <div class="card-block bg-success text-white p-3">
+              <h4>Miles:</h4>
+              <div id="milesOutput"></div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+</div>
+</div>
+
+<script>
+
+  document.getElementById('footInput').addEventListener('input', function(e){
+
+   let foot = e.target.value;
+
+   document.getElementById('meterOutput').innerHTML = foot/3.281;
+   document.getElementById('kmOutput').innerHTML = foot/3281;
+   document.getElementById('milesOutput').innerHTML = foot/5280;
+
+  });
+
+</script>
+</body>
+</html>
